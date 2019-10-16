@@ -10,7 +10,6 @@ import com.google.android.libraries.places.api.model.Place;
 import java.util.ArrayList;
 
 public class GeoFencing {
-    public GeofencingClient geofencingClient;
     public ArrayList<Geofence> geofenceList;
 
     public void createGeofence(Place place){
@@ -24,6 +23,6 @@ public class GeoFencing {
                         place.getLatLng().longitude,
                         100
 
-                );
+                ).build());
     }
 }
