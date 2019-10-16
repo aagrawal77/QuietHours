@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.GeofencingClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
@@ -23,12 +25,15 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rvPlaces;
     Button btnDone;
     PlaceAdapter adapter;
+    GeofencingClient geofencingClient;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        geofencingClient = LocationServices.getGeofencingClient(this);
+
 
         rvPlaces = findViewById(R.id.rvPlaces);
         btnDone = findViewById(R.id.btnDone);

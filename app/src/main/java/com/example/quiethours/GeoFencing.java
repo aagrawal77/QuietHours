@@ -13,10 +13,6 @@ public class GeoFencing {
     public GeofencingClient geofencingClient;
     public ArrayList<Geofence> geofenceList;
 
-    public void onCreate(Bundle savedInstanceState) {
-        geofencingClient = LocationServices.getGeofencingClient(this);
-    }
-
     public void createGeofence(Place place){
         geofenceList.add(new Geofence.Builder()
                 // Set the request ID of the geofence. This is a string to identify this
