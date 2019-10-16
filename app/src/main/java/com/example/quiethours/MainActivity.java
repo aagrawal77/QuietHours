@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // send intent with adapter.places over to the geofencing page, where the geofences will be made 
+                // send intent with adapter.places over to the geofencing page, where the geofences will be made
             }
         });
-        Places.initialize(getApplicationContext(), "AIzaSyARdEWl1STLn5_1zUG3w0X4e6dTX-0TIR4");
+        Places.initialize(getApplicationContext(), " ");
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvPlaces.setLayoutManager(layoutManager);
