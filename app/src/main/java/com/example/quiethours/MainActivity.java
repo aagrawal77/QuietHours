@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 // send intent with adapter.places over to the geofencing page, where the geofences will be made
             }
         });
-        Places.initialize(getApplicationContext(), " ");
+        Places.initialize(getApplicationContext(), "AIzaSyARdEWl1STLn5_1zUG3w0X4e6dTX-0TIR4");
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rvPlaces.setLayoutManager(layoutManager);
